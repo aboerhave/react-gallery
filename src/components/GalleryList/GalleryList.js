@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-
+import GalleryItem from '../GalleryItem/GalleryItem';
 
 class GalleryList extends Component {
     render() {
         return (
             <>
             {this.props.pictureArray.map((picture) => {
-                return <img src={picture.path} alt={picture.description} />
+                return <GalleryItem picture={picture} />
             })}
             </>
         )
