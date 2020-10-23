@@ -25,10 +25,10 @@ class App extends Component {
       console.log('response', response.data);
       this.setState({
         pictureArray: response.data
-      }).catch((error) => {
-        console.log('error', error);
       })
-    });
+    }).catch((error) => {
+      console.log('error', error);
+    })
   }
 
   render() {
