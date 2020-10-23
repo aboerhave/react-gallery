@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { Component } from 'react';
-import Header from '../Header/Header'
+import Header from '../Header/Header';
+import GalleryList from '../GalleryList/GalleryList';
 import './App.css';
 
 class App extends Component {
@@ -28,7 +29,7 @@ class App extends Component {
       })
     }).catch((error) => {
       console.log('error', error);
-    })
+    });
   }
 
   render() {
@@ -37,10 +38,7 @@ class App extends Component {
         <Header />
         <br/>
         <p>Gallery goes here</p>
-        <img src="images/goat_small.jpg"/>
-        {this.state.pictureArray.map((picture) => {
-          return <li> {picture.description}</li>
-        })}
+        <GalleryList pictureArray={this.state.pictureArray} />
       </div>
     );
   }
