@@ -1,11 +1,13 @@
 .PictureDivOn {
     display: inline-block;
-    /* background-color: red; */
+    /* background-color: green; */
     margin: 5px;
     padding: 5px;
     border: 1px solid black;
     width: 300px;
     height: 300px;
+    position: relative;
+    vertical-align: top;
   }
 
   .PictureDivOff {
@@ -17,6 +19,7 @@
     width: 300px;
     height: 300px;
     position: relative;
+    vertical-align: top;
   }
 
   .PictureDivOff img {
@@ -24,7 +27,9 @@
   }
 
   .PictureDivOff div {
-    display: block;
+    /* background-color: yellow; */
+    vertical-align: top;
+    display: inline-block;
     position: absolute;
     top: 0;
     left: 50%;
@@ -34,15 +39,21 @@
     height: 150px;
   }
 
-  .PictureDivOff p{
+  .ImageText{
     position: absolute;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border: 1px solid green; */
+    /* border: 1px solid white; */
     font-size: 20px;
   }
 
   img {
     align-content: center;
+  }
+  
+  button {
+    margin-top: 12px;
+    /* margin-bottom: 0px; */
+    padding: 3px;
   }

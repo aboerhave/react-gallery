@@ -18,7 +18,7 @@ class GalleryItem extends Component {
                 width="200px"  onClick={this.imageToggle}
                 />
                 <br></br>
-                <button onClick={() => this.addLike(picture.id)}>click to like</button>
+                <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                 <p>{picture.likes} people like this picture!</p>
             </div>
             )
@@ -31,10 +31,10 @@ class GalleryItem extends Component {
                     width="200px"  onClick={this.imageToggle}
                     />
                     <div className="textClass" onClick={this.imageToggle}>
-                        <p>{picture.description}</p>
+                        <p className="ImageText">{picture.description}</p>
                     </div>
                     <br></br>
-                    <button onClick={() => this.addLike(picture.id)}>click to like</button>
+                    <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                     <p>{picture.likes} people like this picture!</p>
                 </div>
             )
@@ -58,7 +58,7 @@ class GalleryItem extends Component {
             url: `gallery/like/${pictureId}`
         }).then((response) => {
             console.log('response', response);
-            
+            this.props.getPictures();
         }).catch((error) => {
             console.log('error', error);
             alert('There was a problem.  Try again later');

@@ -37,10 +37,12 @@ class App extends Component {
       <div className="App">
         <Header />
         <br/>
-        <GalleryList pictureArray={this.state.pictureArray} />
+        <GalleryList pictureArray={this.state.pictureArray} getPictures={this.getPictures}/>
       </div>
     );
   }
 }
+
+
 
 export default App;
