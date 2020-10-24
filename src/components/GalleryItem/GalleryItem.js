@@ -17,7 +17,7 @@ class GalleryItem extends Component {
                 width="200px"  onClick={this.imageToggle}
                 />
                 <br></br>
-                <button>click to like</button>
+                <button onClick={this.addLike}>click to like</button>
             </div>
             )
         }
@@ -32,7 +32,7 @@ class GalleryItem extends Component {
                         <p>{picture.description}</p>
                     </div>
                     <br></br>
-                    <button>click to like</button>
+                    <button onClick={this.addLike}>click to like</button>
                 </div>
             )
         }
@@ -40,21 +40,23 @@ class GalleryItem extends Component {
 
     imageToggle = (event) => {
         event.preventDefault();
-        console.log('clicked', this.state.pictureOn);
+        console.log(' picture clicked', this.state.pictureOn);
         this.setState({
             pictureOn: !this.state.pictureOn
         })
     }
 
+    addLike = (event) => {
+        event.preventDefault();
+        console.log('button clicked');
+        
+    }
+
     render(){
         return (
+            // this line calls the renderPictures function above to
+            // perform the conditional rendering
             this.renderPictures(this.props.picture)
-            // <div className="PictureDiv" >
-            //     <img src={this.props.picture.path} 
-            //     alt={this.props.picture.description} 
-            //     width="200px"  onClick={this.imageToggle}
-            //     />
-            // </div>
         )
     }
 }
