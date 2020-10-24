@@ -16,6 +16,8 @@ class GalleryItem extends Component {
                 alt={picture.description} 
                 width="200px"  onClick={this.imageToggle}
                 />
+                <br></br>
+                <button>click to like</button>
             </div>
             )
         }
@@ -29,6 +31,8 @@ class GalleryItem extends Component {
                     <div className="textClass" onClick={this.imageToggle}>
                         <p>{picture.description}</p>
                     </div>
+                    <br></br>
+                    <button>click to like</button>
                 </div>
             )
         }
