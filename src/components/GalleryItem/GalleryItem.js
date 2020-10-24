@@ -26,6 +26,9 @@ class GalleryItem extends Component {
                     alt={picture.description} 
                     width="200px"  onClick={this.imageToggle}
                     />
+                    <div className="textClass" onClick={this.imageToggle}>
+                        <p>{picture.description}</p>
+                    </div>
                 </div>
             )
         }
