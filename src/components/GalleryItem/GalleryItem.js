@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import './GalleryItem.css';
 
 
@@ -18,6 +19,7 @@ class GalleryItem extends Component {
                 />
                 <br></br>
                 <button onClick={() => this.addLike(picture.id)}>click to like</button>
+                <p>{picture.likes} people like this picture!</p>
             </div>
             )
         }
@@ -33,6 +35,7 @@ class GalleryItem extends Component {
                     </div>
                     <br></br>
                     <button onClick={() => this.addLike(picture.id)}>click to like</button>
+                    <p>{picture.likes} people like this picture!</p>
                 </div>
             )
         }
@@ -50,7 +53,16 @@ class GalleryItem extends Component {
     addLike = (pictureId) => {
         // event.preventDefault();
         console.log('button clicked', pictureId);
-        
+        axios({
+            method: 'put',
+            url: `gallery/like/${pictureId}`
+        }).then((response) => {
+            console.log('response', response);
+            
+        }).catch((error) => {
+            console.log('error', error);
+            alert('There was a problem.  Try again later');
+        })
     }
 
     render(){
