@@ -17,7 +17,7 @@ class GalleryItem extends Component {
                 width="200px"  onClick={this.imageToggle}
                 />
                 <br></br>
-                <button onClick={this.addLike}>click to like</button>
+                <button onClick={() => this.addLike(picture.id)}>click to like</button>
             </div>
             )
         }
@@ -32,7 +32,7 @@ class GalleryItem extends Component {
                         <p>{picture.description}</p>
                     </div>
                     <br></br>
-                    <button onClick={this.addLike}>click to like</button>
+                    <button onClick={() => this.addLike(picture.id)}>click to like</button>
                 </div>
             )
         }
@@ -46,9 +46,10 @@ class GalleryItem extends Component {
         })
     }
 
-    addLike = (event) => {
-        event.preventDefault();
-        console.log('button clicked');
+    // add "like" when button is clicked
+    addLike = (pictureId) => {
+        // event.preventDefault();
+        console.log('button clicked', pictureId);
         
     }
 
