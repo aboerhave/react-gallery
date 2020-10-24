@@ -19,7 +19,22 @@ class GalleryItem extends Component {
                 />
                 <br></br>
                 <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
-                <p>{picture.likes} people like this picture!</p>
+                {picture.likes === 0 && 
+                    <p>
+                        Nobody likes this picture yet.
+                    </p>
+                }
+                {picture.likes === 1 && 
+                    <p>
+                        One person likes this picture!
+                    </p>
+                }
+                {picture.likes > 1 && 
+                    <p>
+                        {picture.likes} people like this picture!
+                    </p>
+                }
+
             </div>
             )
         }
@@ -35,7 +50,22 @@ class GalleryItem extends Component {
                     </div>
                     <br></br>
                     <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
-                    <p>{picture.likes} people like this picture!</p>
+                    {picture.likes === 0 && 
+                    <p>
+                        Nobody likes this picture yet.
+                    </p>
+                    }
+                    {picture.likes === 1 && 
+                    <p>
+                        One person likes this picture!
+                    </p>
+                    }
+                    {picture.likes > 1 && 
+                    <p>
+                        {picture.likes} people like this picture!
+                    </p>
+                    }
+
                 </div>
             )
         }

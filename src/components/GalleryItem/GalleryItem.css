@@ -1,11 +1,11 @@
 .PictureDivOn {
     display: inline-block;
     /* background-color: green; */
-    margin: 5px;
+    margin: 8px;
     padding: 5px;
     border: 1px solid black;
     width: 300px;
-    height: 300px;
+    height: 275px;
     position: relative;
     vertical-align: top;
   }
@@ -17,7 +17,7 @@
     padding: 5px;
     border: 1px solid black;
     width: 300px;
-    height: 300px;
+    height: 275px;
     position: relative;
     vertical-align: top;
   }
@@ -49,6 +49,7 @@
   }
 
   img {
+    margin-top: 25px;
     align-content: center;
   }
   
