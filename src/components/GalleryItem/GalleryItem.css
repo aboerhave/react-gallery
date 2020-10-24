@@ -1,4 +1,4 @@
-.PictureDiv {
+.PictureDivOn {
     display: inline-block;
     /* background-color: red; */
     margin: 5px;
@@ -8,7 +8,20 @@
     height: 300px;
   }
 
+  .PictureDivOff {
+    display: inline-block;
+    /* background-color: red; */
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+  }
+
+  .PictureDivOff img {
+    opacity: .2;
+  }
+
   img {
     align-content: center;
-
   }
