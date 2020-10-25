@@ -9,6 +9,8 @@ class GalleryItem extends Component {
         pictureOn: true
     }
 
+
+
     renderPictures = (picture) => {
         if(this.state.pictureOn){
         return (
@@ -34,7 +36,7 @@ class GalleryItem extends Component {
                         {picture.likes} people like this picture!
                     </p>
                 }
-                <button className="deleteBtn" >X</button>
+                <button onClick={() => this.deletePicture(picture.id)} className="deleteBtn" >X</button>
             </div>
             )
         }
@@ -65,7 +67,7 @@ class GalleryItem extends Component {
                         {picture.likes} people like this picture!
                     </p>
                     }
-
+                    <button onClick={() => this.deletePicture(picture.id)} className="deleteBtn" >X</button>
                 </div>
             )
         }
@@ -93,6 +95,11 @@ class GalleryItem extends Component {
             console.log('error', error);
             alert('There was a problem.  Try again later');
         })
+    }
+
+    deletePicture = (pictureId) => {
+        console.log('delete button clicked', pictureId);
+        
     }
 
     render(){
