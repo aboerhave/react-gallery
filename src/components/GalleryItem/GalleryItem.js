@@ -99,7 +99,16 @@ class GalleryItem extends Component {
 
     deletePicture = (pictureId) => {
         console.log('delete button clicked', pictureId);
-        
+        axios({
+            method: 'DELETE',
+            url: `gallery/${pictureId}`
+        }).then((response) => {
+            console.log('response', response);
+            this.props.getPictures();            
+        }).catch((error) => {
+            console.log('error', error);
+            alert('There was a problem.  Try again later');
+        });
     }
 
     render(){
