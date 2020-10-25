@@ -1,7 +1,12 @@
+/* This is the App.css file for the Week 10 assignment for Prime Digital Academy, created by Adam Boerhave, 
+10/22/1010 - 10/25/2020 */
+
+/* keeps stuff in the middle */
 .App {
   text-align: center;
 }
 
+/* header color and spacing */
 .App-header {
   background-color: rgb(22, 35, 153);
   height: 70px;
@@ -9,6 +14,7 @@
   color: white;
 }
 
+/* header text size */
 .App-title {
   font-size: 1.5em;
 }
@@ -17,11 +23,7 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
+/* color for page */
 body {
   background-color: rgb(106, 174, 236);
 }
