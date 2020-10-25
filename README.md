@@ -36,7 +36,7 @@ In the terminal, enter the command 'npm run server'.  Open a new terminal window
 
 3.  The red button may be clicked to permanently delete the entire image entry.  This cannot be undone.
 
-4.  A new image may be inserted by putting its path into the box above the images, with description text in the right box.  I limited characters to 75 here so they will all fit in the picture when displayed.
+4.  A new image may be inserted by putting its path into the box above the images, with description text in the right box.  I limited characters to 75 here so they will all fit in the picture when displayed.  There are 5 more entries in the text_entries.txt file that can be copied into the input boxes.
 
 ## Built With
 
