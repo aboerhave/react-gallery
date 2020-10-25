@@ -1,18 +1,22 @@
+// This is the GalleryItem.js file for the Week 10 assignment for Prime Digital Academy, created by Adam Boerhave, 
+// 10/22/1010 - 10/25/2020
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import './GalleryItem.css';
 
-
 class GalleryItem extends Component {
 
+    // initial state
     state = {
         pictureOn: true
     }
 
-
-
+    // renderPictures function goes through and selects what should be rendered for the elememts
+    // based on the pictureOn state and the number of likes the picture has
     renderPictures = (picture) => {
-        if(this.state.pictureOn){
+        // if the pictureON state true
+        if(this.state.pictureOn){   
         return (
             <div className="PictureDivOn" >
                 <img src={picture.path} 
@@ -22,24 +26,19 @@ class GalleryItem extends Component {
                 <br></br>
                 <button className="likeBtn" onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                 {picture.likes === 0 && 
-                    <p>
-                        Nobody likes this picture yet.
-                    </p>
+                    <p>Nobody likes this picture yet.</p>
                 }
                 {picture.likes === 1 && 
-                    <p>
-                        One person likes this picture!
-                    </p>
+                    <p>One person likes this picture!</p>
                 }
                 {picture.likes > 1 && 
-                    <p>
-                        {picture.likes} people like this picture!
-                    </p>
+                    <p>{picture.likes} people like this picture!</p>
                 }
                 <button onClick={() => this.deletePicture(picture.id)} className="deleteBtn" >X</button>
             </div>
             )
         }
+        // if the pictureOn state fale\se
         else {
             return (
                 <div className="PictureDivOff" >
@@ -53,19 +52,13 @@ class GalleryItem extends Component {
                     <br></br>
                     <button className="likeBtn"onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                     {picture.likes === 0 && 
-                    <p>
-                        Nobody likes this picture yet.
-                    </p>
+                    <p>Nobody likes this picture yet.</p>
                     }
                     {picture.likes === 1 && 
-                    <p>
-                        One person likes this picture!
-                    </p>
+                    <p>One person likes this picture!</p>
                     }
                     {picture.likes > 1 && 
-                    <p>
-                        {picture.likes} people like this picture!
-                    </p>
+                    <p>{picture.likes} people like this picture!</p>
                     }
                     <button onClick={() => this.deletePicture(picture.id)} className="deleteBtn" >X</button>
                 </div>
@@ -73,15 +66,15 @@ class GalleryItem extends Component {
         }
     }
 
+    // imageToggle function changes state to opposite so it turns off or on
     imageToggle = (event) => {
         event.preventDefault();
-        console.log(' picture clicked', this.state.pictureOn);
         this.setState({
             pictureOn: !this.state.pictureOn
-        })
+        });
     }
 
-    // add "like" when button is clicked
+    // add "like" to picture data in database when button is clicked
     addLike = (pictureId) => {
         // event.preventDefault();
         console.log('button clicked', pictureId);
@@ -97,6 +90,7 @@ class GalleryItem extends Component {
         })
     }
 
+    // deletePicture for deleting entire picture with data from db after the red x button is clicked
     deletePicture = (pictureId) => {
         console.log('delete button clicked', pictureId);
         axios({

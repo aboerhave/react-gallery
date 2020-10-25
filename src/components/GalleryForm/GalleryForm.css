@@ -1,8 +1,13 @@
+/* This is the gallery Form stylesheet for the Week 10 assignment for Prime Digital Academy, created by Adam Boerhave, 
+10/22/1010 - 10/25/2020 */
+
+/* input box spacing */
 input {
     padding: 3px;
     margin: 5px 20px 5px 5px;
 }
 
+/* button spacing */
 button {
     padding: 3px;
 }

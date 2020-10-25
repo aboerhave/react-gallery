@@ -1,7 +1,11 @@
+/* This is the gallery router file for the Week 10 assignment for Prime Digital Academy, created by Adam Boerhave, 
+10/22/1010 - 10/25/2020 */
+
+/* style for div when the picture is visible */
 .PictureDivOn {
     display: inline-block;
     background-color: rgb(163, 240, 223);
-    margin: 8px;
+    margin: 12px;
     padding: 5px;
     border: 1px solid black;
     width: 300px;
@@ -10,10 +14,11 @@
     vertical-align: top;
   }
 
+  /* style for div when words are on top of image */
   .PictureDivOff {
     display: inline-block;
     background-color: rgb(163, 240, 223);
-    margin: 8px;
+    margin: 12px;
     padding: 5px;
     border: 1px solid black;
     width: 300px;
@@ -26,43 +31,46 @@
     -ms-user-select: none;      /* IE 10+ */
   }
 
+  /* changes opacity of image when clicked */
   .PictureDivOff img {
     opacity: .3;
   }
 
+  /* changes spacing of text when clicked */
   .PictureDivOff div {
-    /* background-color: yellow; */
     vertical-align: top;
     display: inline;
     position: absolute;
     top: 0;
     left: 50%;
     transform: translate(-50%, 5px);
-    /* border: 1px solid black; */
     width: 225px;
     height: 169px;
     margin-top: 25px;
   }
 
+  /* changes spacing of text when clicked */
   .ImageText{
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* border: 1px solid white; */
     font-size: 18px;
   }
 
+  /* spacing for picture */
   img {
     margin-top: 25px;
     align-content: center;
   }
   
+  /* spacing for like button  */
   .likeBtn {
     margin-top: 12px;
     padding: 3px;
   }
 
+  /* spacing for red button */
 .deleteBtn {
   position: absolute;
   right: 7px;
