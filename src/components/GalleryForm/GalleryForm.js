@@ -56,7 +56,7 @@ render() {
             <label htmlFor="descriptionBox">Description of Image:</label>
             <input type="text" placeholder="Description of Image" id="descriptionBox"
                 onChange={(event) => this.handleChange(event, 'description')}
-                value={this.state.newPicture.description} maxLength="50" ref="desc"/>
+                value={this.state.newPicture.description} maxLength="75" ref="desc"/>
             <button>Submit New Picture</button>
         </form>
         </>
