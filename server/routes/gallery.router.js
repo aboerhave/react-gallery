@@ -36,4 +36,19 @@ router.get('/', (req, res) => {
     });
 }); // END GET Route
 
+router.post('/', (req, res) => {
+    console.log('req.body', req.body);
+    let queryText = `INSERT INTO "cool_pictures" 
+    ("path", "description")
+    VALUES ($1, $2);`;
+    
+    pool.query(queryText, [req.body.path, req.body.description]).then((result) => {
+        console.log('added to db', req.body);
+        res.sendStatus(201);
+    }).catch((error) => {
+        console.log('error', error);
+        res.sendStatus(500);
+    })
+})
+
 module.exports = router;

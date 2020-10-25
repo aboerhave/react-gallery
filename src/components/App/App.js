@@ -38,7 +38,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <br/>
-        <GalleryForm />
+        <GalleryForm getPictures={this.getPictures}/>
         <GalleryList pictureArray={this.state.pictureArray} getPictures={this.getPictures}/>
       </div>
     );

@@ -1,4 +1,6 @@
+import axios from 'axios';
 import React, { Component } from 'react';
+import './GalleryForm.css';
 
 
 class GalleryForm extends Component {
@@ -22,6 +24,16 @@ handleChange = (event, property) => {
 addPicture = (event) => {
     event.preventDefault();
     console.log('clicked', this.state.newPicture);
+    axios({
+        method: 'POST',
+        url: '/gallery',
+        data: this.state.newPicture
+    }).then((response) => {
+        console.log('response', response);
+        this.props.getPictures();        
+    }).catch((error) => {
+        console.log('error', error);
+    });
 }
 
 render() {
@@ -33,7 +45,7 @@ render() {
             <input type="text" placeholder="Path to Image" id="pathBox"
                 onChange={(event) => this.handleChange(event, 'path')}
                 value={this.state.newPicture.path}/>
-            <label htmlFor="descriptionBox">Decription of Image</label>
+            <label htmlFor="descriptionBox">Description of Image</label>
             <input type="text" placeholder="Description of Image" id="descriptionBox"
                 onChange={(event) => this.handleChange(event, 'description')}
                 value={this.state.newPicture.description} maxLength="200"/>
