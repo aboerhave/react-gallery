@@ -10,7 +10,7 @@ The main problem for this project has been using and understanding React.  I tri
 
 ## Screen Shot
 
-![Screen Shot](images/Screen.png)
+![Screen Shot](public/images/Screen.png)
 
 ### Prerequisites
 
