@@ -30,7 +30,15 @@ addPicture = (event) => {
         data: this.state.newPicture
     }).then((response) => {
         console.log('response', response);
-        this.props.getPictures();        
+        this.props.getPictures();      
+        this.setState({
+            newPicture: {
+                path: '',
+                description: ''
+            }
+        });  
+        this.refs.path.value="";
+        this.refs.desc.value="";
     }).catch((error) => {
         console.log('error', error);
     });
@@ -44,11 +52,11 @@ render() {
             <label htmlFor="pathBox">Path to Image</label>
             <input type="text" placeholder="Path to Image" id="pathBox"
                 onChange={(event) => this.handleChange(event, 'path')}
-                value={this.state.newPicture.path}/>
+                value={this.state.newPicture.path} ref="path"/>
             <label htmlFor="descriptionBox">Description of Image</label>
             <input type="text" placeholder="Description of Image" id="descriptionBox"
                 onChange={(event) => this.handleChange(event, 'description')}
-                value={this.state.newPicture.description} maxLength="200"/>
+                value={this.state.newPicture.description} maxLength="50" ref="desc"/>
             <button>Submit New Picture</button>
         </form>
         </>

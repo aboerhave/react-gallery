@@ -15,7 +15,7 @@ class GalleryItem extends Component {
             <div className="PictureDivOn" >
                 <img src={picture.path} 
                 alt={picture.description} 
-                width="200px"  onClick={this.imageToggle}
+                width="225px"  onClick={this.imageToggle}
                 />
                 <br></br>
                 <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
@@ -43,7 +43,7 @@ class GalleryItem extends Component {
                 <div className="PictureDivOff" >
                     <img src={picture.path} 
                     alt={picture.description} 
-                    width="200px"  onClick={this.imageToggle}
+                    width="225px"  onClick={this.imageToggle}
                     />
                     <div className="textClass" onClick={this.imageToggle}>
                         <p className="ImageText">{picture.description}</p>
