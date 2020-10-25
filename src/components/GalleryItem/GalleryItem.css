@@ -20,6 +20,10 @@
     height: 275px;
     position: relative;
     vertical-align: top;
+    /* should keep text from being selected so it's easier to click */
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
   }
 
   .PictureDivOff img {
@@ -34,7 +38,7 @@
     top: 0;
     left: 50%;
     transform: translate(-50%, 5px);
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 200px;
     height: 150px;
     margin-top: 25px;
@@ -58,3 +62,4 @@
     margin-top: 12px;
     padding: 3px;
   }
+
