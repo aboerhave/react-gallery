@@ -18,7 +18,7 @@ class GalleryItem extends Component {
                 width="225px"  onClick={this.imageToggle}
                 />
                 <br></br>
-                <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
+                <button className="likeBtn" onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                 {picture.likes === 0 && 
                     <p>
                         Nobody likes this picture yet.
@@ -34,7 +34,7 @@ class GalleryItem extends Component {
                         {picture.likes} people like this picture!
                     </p>
                 }
-
+                <button className="deleteBtn" >X</button>
             </div>
             )
         }

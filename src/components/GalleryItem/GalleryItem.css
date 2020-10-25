@@ -58,8 +58,16 @@
     align-content: center;
   }
   
-  button {
+  .likeBtn {
     margin-top: 12px;
     padding: 3px;
   }
 
+.deleteBtn {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  padding: 3px;
+  background-color: red;
+  color: white;
+}
