@@ -15,7 +15,7 @@ class App extends Component {
     this.getPictures();
   }
 
-  // need GET request
+  // GET request
   getPictures = () => {
     console.log('in getPictures');
     
