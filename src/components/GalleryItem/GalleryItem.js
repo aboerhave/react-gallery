@@ -51,7 +51,7 @@ class GalleryItem extends Component {
                         <p className="ImageText">{picture.description}</p>
                     </div>
                     <br></br>
-                    <button onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
+                    <button className="likeBtn"onClick={() => this.addLike(picture.id)}>Click to Like Picture</button>
                     {picture.likes === 0 && 
                     <p>
                         Nobody likes this picture yet.

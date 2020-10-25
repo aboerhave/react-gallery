@@ -1,6 +1,6 @@
 .PictureDivOn {
     display: inline-block;
-    /* background-color: green; */
+    background-color: rgb(163, 240, 223);
     margin: 8px;
     padding: 5px;
     border: 1px solid black;
@@ -12,7 +12,7 @@
 
   .PictureDivOff {
     display: inline-block;
-    /* background-color: red; */
+    background-color: rgb(163, 240, 223);
     margin: 8px;
     padding: 5px;
     border: 1px solid black;
