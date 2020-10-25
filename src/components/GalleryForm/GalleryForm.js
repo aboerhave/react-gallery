@@ -50,9 +50,10 @@ render() {
         <h3>Add a new image to the collection:</h3>
         <form onSubmit={this.addPicture}>
             <label htmlFor="pathBox">Path to Image:</label>
-            <input type="text" placeholder="Path to Image" id="pathBox"
+            <input type="file" placeholder="Path to Image" id="pathBox"
                 onChange={(event) => this.handleChange(event, 'path')}
                 value={this.state.newPicture.path} ref="path"/>
+
             <label htmlFor="descriptionBox">Description of Image:</label>
             <input type="text" placeholder="Description of Image" id="descriptionBox"
                 onChange={(event) => this.handleChange(event, 'description')}
