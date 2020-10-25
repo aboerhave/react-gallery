@@ -23,6 +23,10 @@ handleChange = (event, property) => {
 
 addPicture = (event) => {
     event.preventDefault();
+    if (!this.state.newPicture.path || !this.state.newPicture.description) {
+        alert('Please make sure you fill in all of the information');
+        return;
+    }
     console.log('clicked', this.state.newPicture);
     axios({
         method: 'POST',
@@ -50,9 +54,9 @@ render() {
         <h3>Add a new image to the collection:</h3>
         <form onSubmit={this.addPicture}>
             <label htmlFor="pathBox">Path to Image:</label>
-            <input type="file" placeholder="Path to Image" id="pathBox"
+            <input type="text" placeholder="Path to Image" id="pathBox"
                 onChange={(event) => this.handleChange(event, 'path')}
-                value={this.state.newPicture.path} ref="path"/>
+                value={this.state.newPicture.path} ref="path" autoFocus/>
 
             <label htmlFor="descriptionBox">Description of Image:</label>
             <input type="text" placeholder="Description of Image" id="descriptionBox"

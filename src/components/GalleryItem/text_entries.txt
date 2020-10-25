@@ -1,0 +1,13 @@
+These are entries to use to copy and paste in the boxes to test the input boxes in the form:
+
+path:                                       description:
+
+images/Diamondback.jpg                      Diamondback roller coaster at King's Island, OH
+
+images/Happily_Ever_After.jpg               Happily Ever After show at Magic Kingdom, 2019
+
+images/Karl_Twins.jpg                       My friend Karl and I at a Minnesota Twins game
+
+images/Steel_Vengeance_Sign.jpg             Main entrance of Steel Vengeance, Cedar Point, OH
+
+images/Sunset.jpg                           Sunset over Lake Alexander

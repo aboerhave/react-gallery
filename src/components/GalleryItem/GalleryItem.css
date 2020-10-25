@@ -40,13 +40,13 @@
     transform: translate(-50%, 5px);
     /* border: 1px solid black; */
     width: 225px;
-    height: 206px;
+    height: 169px;
     margin-top: 25px;
   }
 
   .ImageText{
     position: absolute;
-    top: 33%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     /* border: 1px solid white; */
