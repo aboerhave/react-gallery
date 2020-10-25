@@ -1,3 +1,6 @@
+// This is the pool.js file for the Week 10 assignment for Prime Digital Academy, created by Adam Boerhave, 
+// 10/22/1010 - 10/25/2020
+
 // Node Module that will connect to postgesql
 const pg = require('pg');
 
