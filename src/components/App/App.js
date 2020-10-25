@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { Component } from 'react';
 import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
+import GalleryForm from '../GalleryForm/GalleryForm';
 import './App.css';
 
 class App extends Component {
@@ -37,6 +38,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <br/>
+        <GalleryForm />
         <GalleryList pictureArray={this.state.pictureArray} getPictures={this.getPictures}/>
       </div>
     );
